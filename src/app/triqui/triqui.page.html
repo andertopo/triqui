@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>triqui</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item lines="none">
+    <ion-label class="ion-text-center">
+      <h1>Turno del usuario {{ gameService.currentUser }}</h1>
+    </ion-label>
+  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let slot of firstRows" (click)="callMovement(slot)">
+        <ion-img [src]="slot.image"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngFor="let slotS of secondRows" (click)="callMovement(slotS)">
+        <ion-img [src]="slotS.image"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngFor="let slotT of thirdRows" (click)="callMovement(slotT)">
+        <ion-img [src]="slotT.image"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-button (click)="reset()">Reset</ion-button>
+</ion-content>

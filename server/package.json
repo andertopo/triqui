@@ -1,0 +1,17 @@
+{
+	"version": "0.0.1",
+	"description": "notificaciones app",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"scripts": {
+		"start": "node server.js"
+	},
+	"name": "notifications",
+	"dependencies": {
+		"express": "^4.17.1",
+        "helmet": "^4.2.0"
+	}
+}

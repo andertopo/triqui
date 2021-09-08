@@ -1,0 +1,12 @@
+{
+  "name": "example-ionic-prod",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "hooks": {
+    "build:after": [
+      "./hooks/copy-web-config.js"
+    ]
+  }
+}
