@@ -30,8 +30,7 @@ export class TriquiPage implements OnInit {
   doTable() {
     this.firstRows = this.tableService.slots.slice(0, 3);
     this.secondRows = this.tableService.slots.slice(3, 6);
-    console.log('second', this.secondRows);
-    this.secondRows = this.tableService.slots.slice(9, 9);
+    this.thirdRows = this.tableService.slots.slice(6, 9);
   }
 
   callMovement(slot: Slot) {
