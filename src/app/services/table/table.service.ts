@@ -18,4 +18,21 @@ export class TableService {
       this.slots.push(slot);
     }
   }
+
+  setUserSlot(slot: Slot, user: string): boolean {
+    let slotSaved = false;
+    if(slot.isEmpty) {
+      if(user == 'x') {
+        slot.image = 'assets/x.png';
+        slot.user = 'x';
+        slot.isEmpty = false;
+      } else {
+        slot.image = 'assets/o.png';
+        slot.user = 'o';
+        slot.isEmpty = false;
+      }
+      slotSaved = true;
+    }
+    return slotSaved;
+  }
 }
